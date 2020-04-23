@@ -29,7 +29,9 @@ const Form = (props)=>{
                 <p>{props.errors.name}</p>
                 <p>{props.errors.email}</p>
                 <p>{props.errors.password}</p>
+                <p>{props.errors.role}</p>
                 <p>{props.errors.terms}</p>
+
             </div>
             <form style={{display:'flex',flexDirection:'column'}}>
                 <label style={centerForms}> Name:&nbsp;

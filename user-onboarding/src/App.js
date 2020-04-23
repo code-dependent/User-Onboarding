@@ -87,6 +87,7 @@ function App() {
       ...formValues,
       [name]:value
     })
+    
     yup.reach(formSchema, name).validate(value)
     .then(valid=>{
       setFormErrors({
@@ -95,6 +96,12 @@ function App() {
       })
     })
     .catch(err=>{
+      if(value === ""){
+        setFormErrors({
+          ...formErrors,
+          [name]:err.errors[0]
+        })
+      }
       setFormErrors({
         ...formErrors,
         [name]:err.errors[0]
