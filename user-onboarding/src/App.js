@@ -12,13 +12,15 @@ const initialFormValues ={
   name:'',
   email:'',
   password:'',
+  role:'',
   terms:false,
 
 }
 const initialFormErrors = {
   name: '',
   email: '',
-  civil: '',
+  password:'',
+  role: '',
   terms:''
 }
 
@@ -35,6 +37,9 @@ const formSchema = yup.object().shape({
     .string()
     .min(6,'Password Must Be, at Least, SIX Characters Long')
     .required('A Valid Password is Required'),
+  role: yup
+    .string()
+    .required('Please Select a Role'),
   terms: yup
     .boolean()
     .oneOf([true], 'Must Accept Terms and Conditions'),
@@ -111,6 +116,7 @@ function App() {
       name: formValues.name,
       email: formValues.email,
       password: formValues.password,
+      role: formValues.role
     }
     axios.post(url, newUser)
     .then(res=>{
@@ -136,7 +142,7 @@ function App() {
         errors={formErrors}
         formDisabled={formDisabled} 
         onChecked={onCheckboxChange}/>
-        
+
         <Members users={users}/>
     </div>
   );

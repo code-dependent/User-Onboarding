@@ -53,6 +53,21 @@ const Form = (props)=>{
                         value={props.formValues.password}
                         onChange={props.onInputChange}/>
                 </label>
+                <label>Role:&nbsp;
+                    <select 
+                        type='text'
+                        onChange={props.onInputChange}
+                        name='role'
+                        value={props.formValues.role}>
+                        <option value=''>Select Role...</option>
+                        <option value='Jr. Web Devaloper'>Jr. Web Devaloper</option>
+                        <option value='Sr. Web Devaloper'>Sr. Web Devaloper</option>
+                        <option value='DS Engineer'>DS Engineer</option>
+                        <option value='Team Lead'>Team Lead</option>
+
+                    </select>
+
+                </label>
                 <label style={centerForms}> Terms of Service:&nbsp;</label>
                     <input 
                         style={centerForms}
