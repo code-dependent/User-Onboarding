@@ -46,12 +46,7 @@ const Form = (props)=>{
                         value={props.formValues.email}
                         onChange={props.onInputChange}/>
                 </label>
-                <label style={{
-            marginBottom:'5%',
-            marginLeft:'6%',
-            marginRight:'auto'
-
-        }}> Password:&nbsp;
+                <label style={centerForms}> Password:&nbsp;
                     <input 
                         type='text' 
                         name='password' 
