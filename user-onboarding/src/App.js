@@ -16,7 +16,7 @@ const initialFormValues ={
 
 }
 const initialFormErrors = {
-  username: '',
+  name: '',
   email: '',
   civil: '',
   terms:''
@@ -60,6 +60,10 @@ function App() {
       setFormValues({
         ...formValues,
         [name]:isChecked
+      })
+      setFormErrors({
+        ...formErrors,
+        [name]:''
       })
     })
     .catch(err=>{
@@ -129,8 +133,10 @@ function App() {
         formValues={formValues} 
         onInputChange={onInputChange} 
         onSubmit={onSubmit} 
+        errors={formErrors}
         formDisabled={formDisabled} 
         onChecked={onCheckboxChange}/>
+        
         <Members users={users}/>
     </div>
   );

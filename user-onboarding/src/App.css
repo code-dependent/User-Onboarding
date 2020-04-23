@@ -1,7 +1,22 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background-color: rgba(157, 157, 157, 0.441);
+  position:absolute;
+  top:30%;
+  left:25%;
+  width:23%;
+  height:33vh;
+  border-radius:5%
 }
-
+button.subBtn{
+  width:40%;
+  position:absolute;
+  left:30%;
+  top:100%
+}
+body{
+  background-image: url('./imgs/space.jpg');
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
